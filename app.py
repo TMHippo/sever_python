@@ -12,6 +12,10 @@ from typing import Optional, List, Dict
 import uvicorn
 
 from constants import *
+import os
+
+
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="sever_python/credentials.json"
 
 app = FastAPI()
 

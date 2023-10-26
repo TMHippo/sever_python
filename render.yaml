@@ -1,4 +1,4 @@
-services:
+services:4
   # A Docker web service
   - type: web
     name: fastapi-example
