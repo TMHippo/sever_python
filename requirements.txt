@@ -3,5 +3,4 @@ uvicorn[standard]
 google-cloud-dialogflow_cx
 uuid
 argparse
-os
 uvicorn
