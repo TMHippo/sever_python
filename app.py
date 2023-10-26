@@ -74,5 +74,5 @@ async def detect_intent_texts(text: str):
     results = ' '.join(response_messages)
     return JSONResponse({'response': results})
 
-if __name__ == '__main__':
-    uvicorn.run("app:app", host=host_api, port=Port, reload=True)
+# if __name__ == '__main__':
+#     uvicorn.run("app:app", host=host_api, port=Port, reload=True)
