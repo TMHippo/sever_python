@@ -72,7 +72,7 @@ async def detect_intent_texts(text: str):
         " ".join(msg.text.text) for msg in response.query_result.response_messages
     ]
     html_response = f'<div style="font-family: Arial, sans-serif;">{response_messages}</div>'
-    return JSONResponse({'response': response_messages}, media_type="text/html")
+    return JSONResponse({'response': html_response}, media_type="text/html")
 
 
 if __name__ == '__main__':
