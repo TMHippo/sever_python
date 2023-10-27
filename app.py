@@ -72,7 +72,8 @@ async def detect_intent_texts(text: str):
         " ".join(msg.text.text) for msg in response.query_result.response_messages
     ]
     html_response = f'<div style="font-family: Arial, sans-serif;">{response_messages}</div>'
-    return JSONResponse(content=html_response, media_type="text/html")
+    return JSONResponse({'response': results}, media_type="text/html")
+
 
 if __name__ == '__main__':
     uvicorn.run("app:app", host=host_api, port=Port, reload=True)
