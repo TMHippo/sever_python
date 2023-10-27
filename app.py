@@ -71,11 +71,9 @@ async def detect_intent_texts(text: str):
     response_messages = [
         " ".join(msg.text.text) for msg in response.query_result.response_messages
     ]
-    headers = {
-        "Content-Type": "application/json; charset=utf-8"
-    }
+    
     results = ' '.join(response_messages)
-    return JSONResponse({'response': results},headers=headers)
+    return JSONResponse({'response': results})
 
 
 if __name__ == '__main__':
